@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CharDataParserl:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CharDataParserl_jar</output-path>
+    <root id="archive" name="CharacterUtil.jar">
+      <element id="module-output" name="CharacterUtil" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/CharacterData.java" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/CharDataParser.java" />
+    </root>
+  </artifact>
+</component>

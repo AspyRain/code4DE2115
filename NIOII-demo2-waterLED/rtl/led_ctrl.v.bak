@@ -1,0 +1,13 @@
+module led_ctrl(
+	input clk,
+	input reset_n,
+	output  [3:0] led
+);
+//此处的代码可以通过Qsys中的Generate->Generate Example，复制里面的内容，粘贴到此处，进行相应的修改
+system_qsys u0 (
+        .clk_clk       (clk),       //   clk.clk
+        .reset_reset_n (reset_n), // reset.reset_n
+        .led_export    (led)     //   led.export
+    );
+
+endmodule

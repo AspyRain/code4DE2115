@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "io_led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[4]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[5]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[8]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[9]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[10]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[11]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[12]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[13]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[14]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[15]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[16]",
+					"strict" : false
+				},
+				{
+					"name" : "io_led[17]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

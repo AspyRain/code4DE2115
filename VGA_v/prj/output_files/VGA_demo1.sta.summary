@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_25'
+Slack : -4.940
+TNS   : -87.856
+
+Type  : Slow 1200mV 85C Model Setup 'VGA_HS~reg0'
+Slack : -1.927
+TNS   : -40.073
+
+Type  : Slow 1200mV 85C Model Setup 'OSC_50'
+Slack : -0.647
+TNS   : -0.647
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_HS~reg0'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_25'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'OSC_50'
+Slack : 0.578
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'OSC_50'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_25'
+Slack : -1.285
+TNS   : -44.975
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_HS~reg0'
+Slack : -1.285
+TNS   : -29.555
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_25'
+Slack : -4.380
+TNS   : -76.843
+
+Type  : Slow 1200mV 0C Model Setup 'VGA_HS~reg0'
+Slack : -1.690
+TNS   : -34.806
+
+Type  : Slow 1200mV 0C Model Setup 'OSC_50'
+Slack : -0.518
+TNS   : -0.518
+
+Type  : Slow 1200mV 0C Model Hold 'VGA_HS~reg0'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_25'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'OSC_50'
+Slack : 0.498
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'OSC_50'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_25'
+Slack : -1.285
+TNS   : -44.975
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_HS~reg0'
+Slack : -1.285
+TNS   : -29.555
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_25'
+Slack : -1.976
+TNS   : -24.209
+
+Type  : Fast 1200mV 0C Model Setup 'VGA_HS~reg0'
+Slack : -0.373
+TNS   : -6.638
+
+Type  : Fast 1200mV 0C Model Setup 'OSC_50'
+Slack : -0.018
+TNS   : -0.018
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_25'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_HS~reg0'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'OSC_50'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'OSC_50'
+Slack : -3.000
+TNS   : -4.043
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_25'
+Slack : -1.000
+TNS   : -35.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_HS~reg0'
+Slack : -1.000
+TNS   : -23.000
+
+------------------------------------------------------------

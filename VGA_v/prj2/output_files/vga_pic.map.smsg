@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at vga_img.v(98): always construct contains both blocking and non-blocking assignments File: E:/study/VGA_v/rtl/vga_img.v Line: 98

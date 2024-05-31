@@ -1,0 +1,8 @@
+char_line00=
+char_line01=
+char_line02=
+char_line03=
+char_line04=
+char_line05=
+char_line06=
+char_line07=

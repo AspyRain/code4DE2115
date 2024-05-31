@@ -1,0 +1,472 @@
+Analysis & Synthesis report for waterled
+Sun May 12 12:08:22 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |led_ctrl
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun May 12 12:08:22 2024           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; waterled                                        ;
+; Top-level Entity Name              ; led_ctrl                                        ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 58                                              ;
+;     Total combinational functions  ; 58                                              ;
+;     Dedicated logic registers      ; 36                                              ;
+; Total registers                    ; 36                                              ;
+; Total pins                         ; 11                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; led_ctrl           ; waterled           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                        ;
++------------------------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+----------------+
+; File Name with User-Entered Path                                 ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                   ; Library        ;
++------------------------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+----------------+
+; demo2_waterled/synthesis/submodules/demo2_waterled_jtag_uart_0.v ; yes             ; User Verilog HDL File  ; E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_jtag_uart_0.v ; demo2_waterled ;
+; rtl/led_ctrl.v                                                   ; yes             ; User Verilog HDL File  ; E:/study/NIOII-demo2-waterLED/rtl/led_ctrl.v                                                   ;                ;
++------------------------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+----------------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 58       ;
+;                                             ;          ;
+; Total combinational functions               ; 58       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 10       ;
+;     -- 3 input functions                    ; 19       ;
+;     -- <=2 input functions                  ; 29       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 33       ;
+;     -- arithmetic mode                      ; 25       ;
+;                                             ;          ;
+; Total registers                             ; 36       ;
+;     -- Dedicated logic registers            ; 36       ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 11       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; En~input ;
+; Maximum fan-out                             ; 38       ;
+; Total fan-out                               ; 289      ;
+; Average fan-out                             ; 2.49     ;
++---------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |led_ctrl                  ; 58 (58)             ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |led_ctrl           ; led_ctrl    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 35    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 9     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Out[7]~reg0                            ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |led_ctrl ;
++----------------+----------------------------+----------------------------+
+; Parameter Name ; Value                      ; Type                       ;
++----------------+----------------------------+----------------------------+
+; cnt_max        ; 10111110101111000001111111 ; Unsigned Binary            ;
++----------------+----------------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 11                          ;
+; cycloneiii_ff         ; 36                          ;
+;     CLR               ; 27                          ;
+;     ENA               ; 1                           ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_lcell_comb ; 59                          ;
+;     arith             ; 25                          ;
+;         2 data inputs ; 25                          ;
+;     normal            ; 34                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 10                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.50                        ;
+; Average LUT depth     ; 3.24                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Sun May 12 12:08:09 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off waterled -c waterled
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/demo2_waterled.v
+    Info (12023): Found entity 1: demo2_waterled File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/demo2_waterled.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_irq_mapper.sv
+    Info (12023): Found entity 1: demo2_waterled_irq_mapper File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_irq_mapper.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0.v
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_avalon_st_adapter File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_rsp_mux_001.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_rsp_mux_001 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_rsp_mux_001.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file demo2_waterled/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_rsp_mux File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_rsp_demux_002.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_rsp_demux_002 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_rsp_demux_002.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_rsp_demux File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_cmd_mux_002.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_cmd_mux_002 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_cmd_mux_002.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_cmd_mux File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_cmd_demux_001.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_cmd_demux_001 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_cmd_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_cmd_demux File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_merlin_traffic_limiter.sv
+    Info (12023): Found entity 1: altera_merlin_traffic_limiter File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_traffic_limiter.sv Line: 49
+Info (12021): Found 2 design units, including 2 entities, in source file demo2_waterled/synthesis/submodules/altera_merlin_reorder_memory.sv
+    Info (12023): Found entity 1: altera_merlin_reorder_memory File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_reorder_memory.sv Line: 28
+    Info (12023): Found entity 2: memory_pointer_controller File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_reorder_memory.sv Line: 185
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 2 design units, including 2 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_004.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_router_004_default_decode File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_004.sv Line: 45
+    Info (12023): Found entity 2: demo2_waterled_mm_interconnect_0_router_004 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_004.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_router_002_default_decode File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: demo2_waterled_mm_interconnect_0_router_002 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_router_001_default_decode File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: demo2_waterled_mm_interconnect_0_router_001 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: demo2_waterled_mm_interconnect_0_router_default_decode File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: demo2_waterled_mm_interconnect_0_router File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_sysid_qsys_0.v
+    Info (12023): Found entity 1: demo2_waterled_sysid_qsys_0 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_sysid_qsys_0.v Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_ram.v
+    Info (12023): Found entity 1: demo2_waterled_ram File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_ram.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_nios2.v
+    Info (12023): Found entity 1: demo2_waterled_nios2 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2.v Line: 9
+Info (12021): Found 27 design units, including 27 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v
+    Info (12023): Found entity 1: demo2_waterled_nios2_cpu_ic_data_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 21
+    Info (12023): Found entity 2: demo2_waterled_nios2_cpu_ic_tag_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 89
+    Info (12023): Found entity 3: demo2_waterled_nios2_cpu_bht_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 158
+    Info (12023): Found entity 4: demo2_waterled_nios2_cpu_register_bank_a_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 227
+    Info (12023): Found entity 5: demo2_waterled_nios2_cpu_register_bank_b_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 293
+    Info (12023): Found entity 6: demo2_waterled_nios2_cpu_dc_tag_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 359
+    Info (12023): Found entity 7: demo2_waterled_nios2_cpu_dc_data_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 425
+    Info (12023): Found entity 8: demo2_waterled_nios2_cpu_dc_victim_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 494
+    Info (12023): Found entity 9: demo2_waterled_nios2_cpu_nios2_oci_debug File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 562
+    Info (12023): Found entity 10: demo2_waterled_nios2_cpu_nios2_oci_break File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 708
+    Info (12023): Found entity 11: demo2_waterled_nios2_cpu_nios2_oci_xbrk File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1001
+    Info (12023): Found entity 12: demo2_waterled_nios2_cpu_nios2_oci_dbrk File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1262
+    Info (12023): Found entity 13: demo2_waterled_nios2_cpu_nios2_oci_itrace File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1451
+    Info (12023): Found entity 14: demo2_waterled_nios2_cpu_nios2_oci_td_mode File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1634
+    Info (12023): Found entity 15: demo2_waterled_nios2_cpu_nios2_oci_dtrace File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1702
+    Info (12023): Found entity 16: demo2_waterled_nios2_cpu_nios2_oci_compute_input_tm_cnt File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1784
+    Info (12023): Found entity 17: demo2_waterled_nios2_cpu_nios2_oci_fifo_wrptr_inc File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1856
+    Info (12023): Found entity 18: demo2_waterled_nios2_cpu_nios2_oci_fifo_cnt_inc File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1899
+    Info (12023): Found entity 19: demo2_waterled_nios2_cpu_nios2_oci_fifo File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 1946
+    Info (12023): Found entity 20: demo2_waterled_nios2_cpu_nios2_oci_pib File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 2432
+    Info (12023): Found entity 21: demo2_waterled_nios2_cpu_nios2_oci_im File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 2455
+    Info (12023): Found entity 22: demo2_waterled_nios2_cpu_nios2_performance_monitors File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 2525
+    Info (12023): Found entity 23: demo2_waterled_nios2_cpu_nios2_avalon_reg File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 2542
+    Info (12023): Found entity 24: demo2_waterled_nios2_cpu_ociram_sp_ram_module File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 2635
+    Info (12023): Found entity 25: demo2_waterled_nios2_cpu_nios2_ocimem File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 2700
+    Info (12023): Found entity 26: demo2_waterled_nios2_cpu_nios2_oci File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 2881
+    Info (12023): Found entity 27: demo2_waterled_nios2_cpu File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu.v Line: 3426
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_debug_slave_sysclk.v
+    Info (12023): Found entity 1: demo2_waterled_nios2_cpu_debug_slave_sysclk File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_debug_slave_sysclk.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_debug_slave_tck.v
+    Info (12023): Found entity 1: demo2_waterled_nios2_cpu_debug_slave_tck File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_debug_slave_tck.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_debug_slave_wrapper.v
+    Info (12023): Found entity 1: demo2_waterled_nios2_cpu_debug_slave_wrapper File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_debug_slave_wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_mult_cell.v
+    Info (12023): Found entity 1: demo2_waterled_nios2_cpu_mult_cell File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_mult_cell.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_test_bench.v
+    Info (12023): Found entity 1: demo2_waterled_nios2_cpu_test_bench File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_nios2_cpu_test_bench.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_led.v
+    Info (12023): Found entity 1: demo2_waterled_led File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_led.v Line: 21
+Info (12021): Found 5 design units, including 5 entities, in source file demo2_waterled/synthesis/submodules/demo2_waterled_jtag_uart_0.v
+    Info (12023): Found entity 1: demo2_waterled_jtag_uart_0_sim_scfifo_w File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_jtag_uart_0.v Line: 21
+    Info (12023): Found entity 2: demo2_waterled_jtag_uart_0_scfifo_w File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_jtag_uart_0.v Line: 78
+    Info (12023): Found entity 3: demo2_waterled_jtag_uart_0_sim_scfifo_r File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_jtag_uart_0.v Line: 164
+    Info (12023): Found entity 4: demo2_waterled_jtag_uart_0_scfifo_r File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_jtag_uart_0.v Line: 243
+    Info (12023): Found entity 5: demo2_waterled_jtag_uart_0 File: E:/study/NIOII-demo2-waterLED/demo2_waterled/synthesis/submodules/demo2_waterled_jtag_uart_0.v Line: 331
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/led_ctrl.v
+    Info (12023): Found entity 1: led_ctrl File: E:/study/NIOII-demo2-waterLED/rtl/led_ctrl.v Line: 1
+Info (12127): Elaborating entity "led_ctrl" for the top level hierarchy
+Info (13000): Registers with preset signals will power-up high File: E:/study/NIOII-demo2-waterLED/rtl/led_ctrl.v Line: 30
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "Out[6]~reg0" is converted into an equivalent circuit using register "Out[6]~reg0_emulated" and latch "Out[6]~1" File: E:/study/NIOII-demo2-waterLED/rtl/led_ctrl.v Line: 30
+Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
+Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
+Warning (20013): Ignored 55 assignments for entity "altera_merlin_master_translator" -- entity does not exist in design
+Warning (20013): Ignored 53 assignments for entity "altera_merlin_slave_agent" -- entity does not exist in design
+Warning (20013): Ignored 68 assignments for entity "altera_merlin_slave_translator" -- entity does not exist in design
+Warning (20013): Ignored 34 assignments for entity "altera_merlin_traffic_limiter" -- entity does not exist in design
+Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "demo2_waterled" -- entity does not exist in design
+Warning (20013): Ignored 14 assignments for entity "demo2_waterled_irq_mapper" -- entity does not exist in design
+Warning (20013): Ignored 24 assignments for entity "demo2_waterled_jtag_uart_0" -- entity does not exist in design
+Warning (20013): Ignored 22 assignments for entity "demo2_waterled_led" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "demo2_waterled_mm_interconnect_0" -- entity does not exist in design
+Warning (20013): Ignored 32 assignments for entity "demo2_waterled_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "demo2_waterled_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "demo2_waterled_mm_interconnect_0_cmd_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "demo2_waterled_mm_interconnect_0_cmd_demux_001" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "demo2_waterled_mm_interconnect_0_cmd_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "demo2_waterled_mm_interconnect_0_cmd_mux_002" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "demo2_waterled_mm_interconnect_0_router" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "demo2_waterled_mm_interconnect_0_router_001" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "demo2_waterled_mm_interconnect_0_router_002" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "demo2_waterled_mm_interconnect_0_router_004" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "demo2_waterled_mm_interconnect_0_rsp_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "demo2_waterled_mm_interconnect_0_rsp_demux_002" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "demo2_waterled_mm_interconnect_0_rsp_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "demo2_waterled_mm_interconnect_0_rsp_mux_001" -- entity does not exist in design
+Warning (20013): Ignored 172 assignments for entity "demo2_waterled_nios2" -- entity does not exist in design
+Warning (20013): Ignored 179 assignments for entity "demo2_waterled_nios2_cpu" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "demo2_waterled_ram" -- entity does not exist in design
+Warning (20013): Ignored 10 assignments for entity "demo2_waterled_sysid_qsys_0" -- entity does not exist in design
+Info (144001): Generated suppressed messages file E:/study/NIOII-demo2-waterLED/output_files/waterled.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 58 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Sun May 12 12:08:22 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:08
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/study/NIOII-demo2-waterLED/output_files/waterled.map.smsg.
+
+

@@ -1,0 +1,86 @@
+module waterled( // @[:@3.2]
+  input   clock, // @[:@4.4]
+  input   reset, // @[:@5.4]
+  output  io_led_0, // @[:@6.4]
+  output  io_led_1, // @[:@6.4]
+  output  io_led_2, // @[:@6.4]
+  output  io_led_3, // @[:@6.4]
+  output  io_led_4, // @[:@6.4]
+  output  io_led_5, // @[:@6.4]
+  output  io_led_6, // @[:@6.4]
+  output  io_led_7, // @[:@6.4]
+  output  io_led_8, // @[:@6.4]
+  output  io_led_9, // @[:@6.4]
+  output  io_led_10, // @[:@6.4]
+  output  io_led_11, // @[:@6.4]
+  output  io_led_12, // @[:@6.4]
+  output  io_led_13, // @[:@6.4]
+  output  io_led_14, // @[:@6.4]
+  output  io_led_15, // @[:@6.4]
+  output  io_led_16, // @[:@6.4]
+  output  io_led_17 // @[:@6.4]
+);
+  reg [4:0] counter; // @[waterled.scala 9:24:@8.4]
+  reg [31:0] _RAND_0;
+  wire  _T_114; // @[waterled.scala 13:17:@64.4]
+  wire [5:0] _T_116; // @[waterled.scala 14:24:@66.6]
+  wire [4:0] _T_117; // @[waterled.scala 14:24:@67.6]
+  wire [4:0] _GEN_0; // @[waterled.scala 13:34:@65.4]
+  assign _T_114 = counter < 5'h11; // @[waterled.scala 13:17:@64.4]
+  assign _T_116 = counter + 5'h1; // @[waterled.scala 14:24:@66.6]
+  assign _T_117 = _T_116[4:0]; // @[waterled.scala 14:24:@67.6]
+  assign _GEN_0 = _T_114 ? _T_117 : 5'h0; // @[waterled.scala 13:34:@65.4]
+  assign io_led_0 = counter == 5'h0; // @[waterled.scala 11:10:@46.4]
+  assign io_led_1 = counter == 5'h1; // @[waterled.scala 11:10:@47.4]
+  assign io_led_2 = counter == 5'h2; // @[waterled.scala 11:10:@48.4]
+  assign io_led_3 = counter == 5'h3; // @[waterled.scala 11:10:@49.4]
+  assign io_led_4 = counter == 5'h4; // @[waterled.scala 11:10:@50.4]
+  assign io_led_5 = counter == 5'h5; // @[waterled.scala 11:10:@51.4]
+  assign io_led_6 = counter == 5'h6; // @[waterled.scala 11:10:@52.4]
+  assign io_led_7 = counter == 5'h7; // @[waterled.scala 11:10:@53.4]
+  assign io_led_8 = counter == 5'h8; // @[waterled.scala 11:10:@54.4]
+  assign io_led_9 = counter == 5'h9; // @[waterled.scala 11:10:@55.4]
+  assign io_led_10 = counter == 5'ha; // @[waterled.scala 11:10:@56.4]
+  assign io_led_11 = counter == 5'hb; // @[waterled.scala 11:10:@57.4]
+  assign io_led_12 = counter == 5'hc; // @[waterled.scala 11:10:@58.4]
+  assign io_led_13 = counter == 5'hd; // @[waterled.scala 11:10:@59.4]
+  assign io_led_14 = counter == 5'he; // @[waterled.scala 11:10:@60.4]
+  assign io_led_15 = counter == 5'hf; // @[waterled.scala 11:10:@61.4]
+  assign io_led_16 = counter == 5'h10; // @[waterled.scala 11:10:@62.4]
+  assign io_led_17 = counter == 5'h11; // @[waterled.scala 11:10:@63.4]
+`ifdef RANDOMIZE_GARBAGE_ASSIGN
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_INVALID_ASSIGN
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_REG_INIT
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_MEM_INIT
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE
+  integer initvar;
+  initial begin
+    `ifndef verilator
+      #0.002 begin end
+    `endif
+  `ifdef RANDOMIZE_REG_INIT
+  _RAND_0 = {1{$random}};
+  counter = _RAND_0[4:0];
+  `endif // RANDOMIZE_REG_INIT
+  end
+`endif // RANDOMIZE
+  always @(posedge clock) begin
+    if (reset) begin
+      counter <= 5'h0;
+    end else begin
+      if (_T_114) begin
+        counter <= _T_117;
+      end else begin
+        counter <= 5'h0;
+      end
+    end
+  end
+endmodule
